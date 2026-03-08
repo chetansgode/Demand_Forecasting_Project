@@ -1,9 +1,10 @@
 import streamlit as st 
 import requests
-from unique_store_sku import sku_list,store_list
+from data_created.unique_store_sku import sku_list,store_list
 
 
-request_url="http://127.0.0.1:8000/forecast"
+#request_url="http://127.0.0.1:8000/forecast" this is fastapi
+request_url="http://fastapi:8000/forecast"  #for docker
 st.title('forcast next number of week demand data')
 
 n_weeks=st.number_input('how many next week data do you want?',value=12)

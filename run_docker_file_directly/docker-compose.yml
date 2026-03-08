@@ -1,0 +1,21 @@
+#1) docker-compose.yml file take image from directly Docker hub  so need to download it on from docker hub configs:
+#and build envirnoment for that
+#2) docker-compose.yml and run_project.bat and stop_project.bat  save in one folder
+#3) open terminal set cd current path of folder
+#4) then write run_project.bat then it automatically take all image and compose it and run
+
+
+#now directly use from docker hub avoid to build 
+services:
+
+  fastapi:
+    image: chetansgode/project-1-demand-forecasting-fastapi:latest
+    ports:
+      - "8000:8000"
+
+  streamlit:
+    image: chetansgode/project-1-demand-forecasting-streamlit:latest
+    ports:
+      - "8501:8501"
+    depends_on:
+      - fastapi

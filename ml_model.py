@@ -1,4 +1,14 @@
 import pandas as pd
+import joblib
+
+MODEL_VERSION=1
+
+# load model
+pipeline = joblib.load("model/sales_forecasting_model.pkl")
+
+# load last data
+last_data = pd.read_csv("data_created/last_data.csv")
+last_data["week"] = pd.to_datetime(last_data["week"])
 
 def forecast_sales(store_id, sku_id, n_weeks, last_data, model):
 
