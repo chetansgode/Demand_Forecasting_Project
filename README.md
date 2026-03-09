@@ -96,7 +96,7 @@
 
 ####        Dashboard Preview:
         
-            ![Dashboard Preview](screenshot.png)
+![Dashboard Preview](screenshot.png)
 
 ## Project File Structure-
     Demand forecasting project:
