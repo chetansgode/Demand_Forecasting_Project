@@ -1,11 +1,62 @@
 Project Title-
-        Demand Forecasting System (EDA + ML Model + FastAPI + Streamlit + Docker)
+        Multi-Store Retail Demand Forecasting using Time Series and Machine Learning
+        (EDA + ML Model + FastAPI + Streamlit + Docker)
+        
 
 Project Description-
             This project forecasts product demand using machine learning.
             The system is built using FastAPI for the backend API and
             Streamlit for the interactive dashboard. The application is
             containerized using Docker and deployed using Docker Compose.
+
+
+## Exploratory Data Analysis (EDA)-
+
+    Exploratory Data Analysis was performed to understand sales patterns and demand behavior across stores and products.
+    
+    Key analysis performed:
+    - Sales trend analysis over time
+    - Store-wise demand distribution
+    - SKU-level sales behavior
+    - Seasonality and trend detection
+    - Missing value handling and preprocessing
+    
+    The complete EDA with visualizations is available in the notebook:
+        Demand_Forecasting_Project.ipynb
+
+## Feature Engineering-
+    
+    To improve model performance, several features were created:
+    
+    - Lag features (previous sales values)
+    - Rolling mean statistics
+    - Time-based features (day, week, month)
+
+## Machine Learning Models-
+
+    Different machine learning models were explored for demand forecasting:
+    
+    
+    - Time series analysis (SARIMA/ARIMA)
+    - XGBoost Regressor
+    
+    After experimentation, **XGBoost** was selected as the final model due to its better performance.
+
+## Model Evaluation-
+    
+    The model performance was evaluated using regression metrics:
+    
+    - MAE (Mean Absolute Error)
+    - RMSE (Root Mean Squared Error)
+    
+    The trained model was saved as:
+    
+    model/sales_forecasting_model.pkl
+
+    ## Model Explainability
+    SHAP (SHapley Additive exPlanations) was used to understand the impact of features on model predictions and interpret the ml model
+
+
 
 Architecture (Brief Explanation)-
             User → Streamlit Dashboard → FastAPI API → ML Model → Prediction 
@@ -41,7 +92,8 @@ Tech Stack-
 
 Screenshots-
         Dashboard Preview:
-        ![Dashboard Preview](screenshot.png)
+        
+            ![Dashboard Preview](screenshot.png)
 
 Project File Structure-
     Demand forecasting project:
@@ -144,7 +196,7 @@ Installation Instructions-
                         │ └── stop_project.bat
 
             ### step 3: in terminal select current path (above folder current path)
-                C:\Users\Cheta\Desktop\Project-1-Demand_forecasting\run_docker_file_directly (replace path)
+              eg.  C:\Users\Cheta\Desktop\Project-1-Demand_forecasting\run_docker_file_directly (replace path)
         
             ### step 4:run project
              #in terminal (write below file name and enter then automatically it run everything )
@@ -159,3 +211,17 @@ Installation Instructions-
 
             Stop the Project-
                     stop_project.bat
+
+## Conclusion-
+
+    This project demonstrates an end-to-end machine learning pipeline for retail demand forecasting.
+    
+    Key highlights:
+    - Complete Exploratory Data Analysis
+    - Feature engineering and time series feature creation
+    - Machine learning model training and evaluation
+    - FastAPI backend for prediction
+    - Streamlit dashboard for visualization
+    - Docker containerization for deployment
+    
+    This system can help retailers predict product demand and optimize inventory management.
