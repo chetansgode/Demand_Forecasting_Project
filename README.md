@@ -1,9 +1,10 @@
-Project Title-
+# Project Title-
+
         Multi-Store Retail Demand Forecasting using Time Series and Machine Learning
-        (EDA + ML Model + FastAPI + Streamlit + Docker)
+        (EDA + ML Model + FastAPI + Pydantic + Streamlit + Docker)
         
 
-Project Description-
+## Project Description-
             This project forecasts product demand using machine learning.
             The system is built using FastAPI for the backend API and
             Streamlit for the interactive dashboard. The application is
@@ -58,10 +59,11 @@ Project Description-
 
 
 
-Architecture (Brief Explanation)-
+## Architecture (Brief Explanation)-
+            
             User → Streamlit Dashboard → FastAPI API → ML Model → Prediction 
 
-Tech Stack-
+## Tech Stack-
 
     Programming-
         Python
@@ -90,12 +92,13 @@ Tech Stack-
         Git
         GitHub
 
-Screenshots-
-        Dashboard Preview:
+## Screenshots-
+
+####        Dashboard Preview:
         
             ![Dashboard Preview](screenshot.png)
 
-Project File Structure-
+## Project File Structure-
     Demand forecasting project:
 
         PROJECT-1-DEMAND-FORECASTING
@@ -116,8 +119,8 @@ Project File Structure-
         │ ├── docker-compose.yml
         │ ├── run_project.bat
         │ └── stop_project.bat
-        │
-        ├── src
+        │── src
+        |
         │ ├── Demand_Forecasting_Project.ipynb
         │ ├── Dockerfile.fastapi
         │ ├── Dockerfile.streamlit
@@ -131,7 +134,7 @@ Project File Structure-
         ├── README.md
         └── .gitignore
 
-Docker Hub Images-
+## Docker Hub Images-
 
         FastAPI Image:
         https://hub.docker.com/r/chetansgode/project-1-demand-forecasting-fastapi
@@ -146,9 +149,9 @@ Docker Hub Images-
         docker pull chetansgode/project-1-demand-forecasting-streamlit
 
 
-Installation Instructions-
+## Installation Instructions-
 
-    Option 1: Step-by-Step Setup (Full Installation)
+###    Option 1: Step-by-Step Setup (Full Installation)
 
              ## How to Run the Project
 
@@ -179,7 +182,7 @@ Installation Instructions-
                 docker compose down
 
 
-    Option 2: Quick Start (Recommended)
+###    Option 2: Quick Start (Recommended)
             Run the project without downloading the entire repository.
 
              ### Step 1: Install Docker  (if not)
